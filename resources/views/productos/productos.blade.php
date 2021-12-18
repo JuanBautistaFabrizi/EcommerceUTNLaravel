@@ -32,6 +32,13 @@
             <td>{{$producto->$talle}}</td>
             <td>{{$producto->$precio}}</td>
             <td background={{$producto->$imagen}}>
+                <td>
+                    <form method="POST" action="producto/{{$producto->idproducto}}">
+                        @csrf
+                        {{@method_field('DELETE')}}
+                        <input type="submit" name="submit" value="Delete">
+                    </form>
+                </td>
         </tr>
         @endforeach
     </tbody>

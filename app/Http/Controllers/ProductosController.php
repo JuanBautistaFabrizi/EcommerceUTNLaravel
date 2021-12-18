@@ -78,7 +78,7 @@ class ProductosController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('producto.editar-producto',$id);
     }
 
     /**
@@ -89,7 +89,9 @@ class ProductosController extends Controller
      */
     public function edit($id)
     {
-        //
+        DB::table('producto')
+        ->where('idproducto',$id)->get();
+        return view('producto.editar-producto');
     }
 
     /**
@@ -101,7 +103,25 @@ class ProductosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            "modelo" => 'required|max:45',
+            "color" => 'required|max:45',
+            "talle" => 'required|max:45',
+            "precio" => 'required|max:45',
+            "imagen" => 'required|max:500000',
+            
+        ]);
+
+        $modelo = $request->post('modelo');
+        $color = $request->post('color');
+        $talle = $request->post('talle');
+        $precio = $request->post('precio');
+        $imagen = $request->post('imagen');
+        
+
+         DB::update("UPDATE producto SET modelo=?,color=?,talle=?,precio=?,imagen=? WHERE idproducto=$id",[$modelo,$color,$talle,$precio,$imagen]);
+
+         return redirect()->route('producto.show',[$id]);
     }
 
     /**

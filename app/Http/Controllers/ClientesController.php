@@ -142,16 +142,16 @@ class ClientesController extends Controller
         $email = $request->post('email');
         $edad = $request->post('edad');
 
-         DB::update("UPDATE cliente SET nombre=?,apellido=?,domicilio=?,telefono=?,email=?,edad=? WHERE idCliente=$id",[$nombre,$apellido,$domicilio,$telefono,$email,$edad]);
+         //DB::update("UPDATE cliente SET nombre=?,apellido=?,domicilio=?,telefono=?,email=?,edad=? WHERE idCliente=$id",[$nombre,$apellido,$domicilio,$telefono,$email,$edad]);
 
-         /* DB::table('cliente')->where('idCliente',$id)->update([
+         DB::table('cliente')->where('idCliente',$id)->update([
             "nombre" => $nombre,
             "apellido" => $apellido,
             "domicilio" => $domicilio,
             "telefono" => $telefono,
             "email" => $email,
             "edad" => $edad
-         ]); */
+         ]);
         
         return redirect()->route('cliente.show',[$id]);
     }

@@ -27,7 +27,8 @@
             <th>telefono</th>
             <th>email</th>
             <th>edad</th>
-            <th>delete</th>
+            <th>Editar</th>
+            <th>Borrar</th>
         </tr>
     </thead>
     <tbody>
@@ -41,10 +42,13 @@
                 <td>{{$cliente->email}}</td>
                 <td>{{$cliente->edad}}</td>
                 <td>
+                    <a href="{{ url('cliente/'.$cliente->idCliente.'/edit')}}">Editar</a>
+                </td>
+                <td>
                     <form method="POST" action="cliente/{{$cliente->idCliente}}">
                         @csrf
                         {{@method_field('DELETE')}}
-                        <input type="submit" name="submit" value="Delete">
+                        <input type="submit" name="submit" value="Borrar">
                     </form>
                 </td>
 
@@ -52,6 +56,8 @@
         @endforeach
     </tbody>
 </table>
+
+
 
 
 
