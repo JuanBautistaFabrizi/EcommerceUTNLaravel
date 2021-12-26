@@ -1,4 +1,17 @@
-<form method="get" action="producto">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{asset('css/clientes.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Productos</h1>
+    <h2 class="buscador">Buscador de productos</h2>
+
+<form method="get" action="productos">
     <label for="idproducto">id: </label>
     <input type="text" name="idproducto"><br>
     <label for="modelo">modelo: </label>
@@ -11,8 +24,9 @@
     <input type="text" name="precio"><br>
     <button type="submit">Buscar</button>
 </form>
-
-<table>
+<br>
+<br>
+<table class="table">
     <thead>
         <tr>
             <th>id</th>
@@ -21,17 +35,22 @@
             <th>talle</th>
             <th>precio</th>
             <th>imagen</th>
+            <th>Editar</th>
+            <th>Borrar</th>
         </tr>
     </thead>
     <tbody>
-        @foreach ($productos as $producto)
+         @foreach ($productos as $producto)
         <tr>
-            <td>{{$producto->$idproducto}}</td>
-            <td>{{$producto->$modelo}}</td>
-            <td>{{$producto->$color}}</td>
-            <td>{{$producto->$talle}}</td>
-            <td>{{$producto->$precio}}</td>
-            <td background={{$producto->$imagen}}>
+            <td>{{$producto->idproducto}}</td>
+            <td>{{$producto->modelo}}</td>
+            <td>{{$producto->color}}</td>
+            <td>{{$producto->talle}}</td>
+            <td>{{$producto->precio}}</td>
+            <td class="img"><img src="{{ asset('img/'.$producto->imagen) }}" /></td>
+            <td>
+                    <a href="{{ url('producto/'.$producto->idproducto.'/edit')}}">Editar</a>
+                </td>
                 <td>
                     <form method="POST" action="producto/{{$producto->idproducto}}">
                         @csrf
@@ -43,3 +62,23 @@
         @endforeach
     </tbody>
 </table>
+<br>
+<h2 class="crear">Crear producto nuevo</h2>
+
+<form method="post" action="{{ route('productos.store');}}">
+    @csrf
+    <label for="modelo">modelo: </label>
+    <input type="text" name="modelo"> <br>
+    <label for="color">color: </label>
+    <input type="text" name="color"> <br>
+    <label for="talle">talle: </label>
+    <input type="text" name="talle"> <br>
+    <label for="precio">precio: </label>
+    <input type="text" name="precio"> <br>
+    <label for="imagen">imagen: </label>
+    <input type="file" name="imagen"> <br>
+    <button type="submit">Agregar</button>
+</form>
+
+</body>
+</html>

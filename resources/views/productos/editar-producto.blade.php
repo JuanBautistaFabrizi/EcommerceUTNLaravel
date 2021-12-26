@@ -1,5 +1,5 @@
 <h1>Editar producto</h1>
-<form method="post" action="producto/{{ $producto->id}}">
+<form method="post" action="productos/{{ $producto->id}}">
     @csrf
     @method('PUT')
     <label for="modelo">modelo: </label>

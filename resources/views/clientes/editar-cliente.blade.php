@@ -1,5 +1,5 @@
 <h1>Editar cliente</h1>
-<form  method="post" action="cliente/edit">
+<form  method="post" action="clientes/edit">
     @csrf
     @method('PUT')
     <label for="nombre">nombre: </label>
@@ -14,5 +14,5 @@
     <input type="text" name="email"> <br>
     <label for="edad">edad: </label>
     <input type="text" name="edad"> <br>
-    <button type="submit">Agregar</button>
+    <button type="submit">Editar</button>
 </form>

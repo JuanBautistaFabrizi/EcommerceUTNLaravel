@@ -1,5 +1,6 @@
 <h1>Crear producto nuevo</h1>
-<form method="post" action="{{ route('producto.store');}}">
+<p>hola</p>
+<form method="post" action="{{ route('productos.store');}}">
     @csrf
     <label for="modelo">modelo: </label>
     <input type="text" name="modelo"> <br>

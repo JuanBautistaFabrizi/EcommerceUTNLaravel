@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
     return view('clientes.clientes')->with("nombres",$arrayClientes);
 }); */
 
-Route::resource('cliente',ClientesController::class);
-Route::resource('producto',ProductosController::class);
+Route::resource('clientes',ClientesController::class);
+Route::resource('productos',ProductosController::class);
 
 

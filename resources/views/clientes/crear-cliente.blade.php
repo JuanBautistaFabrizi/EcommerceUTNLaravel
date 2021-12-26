@@ -2,7 +2,7 @@
 @if($errors->any())
     {{ implode('', $errors->all('<div>:message</div>')) }}
 @endif
-<form class="form" method="post" action={{ route('cliente.store');}}>
+<form class="form" method="post" action={{ route('clientes.store');}}>
     @csrf
     <label for="nombre">nombre: </label>
     <input type="text" name="nombre"> <br>

@@ -1,5 +1,19 @@
-<h1>{{$titulo}}</h1>
-<form  method="get" action="cliente">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="{{ asset('js/function.js')}}"></script>
+    <link rel="stylesheet" href="{{asset('css/clientes.css')}}">
+
+    <title>Document</title>
+</head>
+<body>
+<br>
+    <h2 class="buscador">Buscador de clientes</h2>
+
+<form  method="get" action="clientes">
     <label for="idCliente">id: </label>
     <input type="text" name="idCliente"> <br>
     <label for="nombre">nombre: </label>
@@ -16,6 +30,9 @@
     <input type="text" name="edad"> <br>
     <button type="submit">Buscar</button>
 </form>
+<br>
+<br>
+<h1 style="color:blue">{{$titulo}}</h1>
 
 <table>
     <thead>
@@ -45,10 +62,10 @@
                     <a href="{{ url('cliente/'.$cliente->idCliente.'/edit')}}">Editar</a>
                 </td>
                 <td>
-                    <form method="POST" action="cliente/{{$cliente->idCliente}}">
+                    <form method="POST" action="clientes/{{$cliente->idCliente}}">
                         @csrf
                         {{@method_field('DELETE')}}
-                        <input type="submit" name="submit" value="Borrar">
+                        <input id="btn" type="submit" name="submit" value="Borrar">
                     </form>
                 </td>
 
@@ -56,6 +73,30 @@
         @endforeach
     </tbody>
 </table>
+
+<h2 class="crear">Crear cliente nuevo</h2>
+
+@if($errors->any())
+    {{ implode('', $errors->all('<div>:message</div>')) }}
+@endif
+<form class="form" method="post" action={{ route('clientes.store');}}>
+    @csrf
+    <label for="nombre">nombre: </label>
+    <input type="text" name="nombre"> <br>
+    <label for="apellido">apellido: </label>
+    <input type="text" name="apellido"> <br>
+    <label for="domicilio">domicilio: </label>
+    <input type="text" name="domicilio"> <br>
+    <label for="telefono">telefono: </label>
+    <input type="text" name="telefono"> <br>
+    <label for="email">mail: </label>
+    <input type="text" name="email"> <br>
+    <label for="edad">edad: </label>
+    <input type="text" name="edad"> <br>
+    <button  type="submit">Agregar</button>
+</form>
+</body>
+</html>
 
 
 

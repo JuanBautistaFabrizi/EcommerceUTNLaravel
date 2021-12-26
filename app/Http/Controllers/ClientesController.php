@@ -37,8 +37,9 @@ class ClientesController extends Controller
             "titulo" => "Tabla de clientes"
         ];
         return view('clientes.clientes',$parametros);
+
     }
-        
+
 
 
     /**
@@ -47,10 +48,10 @@ class ClientesController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {   
+    {
 
         $parametros = [
-            
+
             "titulo" => "Formulario para crear clientes"
         ];
         return view('clientes.crear-cliente',$parametros);
@@ -99,8 +100,8 @@ class ClientesController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {   
-        
+    {
+
         return view('clientes.editar-cliente',$id);
     }
 
@@ -111,7 +112,7 @@ class ClientesController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {   
+    {
         DB::table('cliente')
         ->where('idCliente',$id)->get();
         return view('clientes.editar-cliente');
@@ -152,7 +153,7 @@ class ClientesController extends Controller
             "email" => $email,
             "edad" => $edad
          ]);
-        
+
         return redirect()->route('cliente.show',[$id]);
     }
 
@@ -170,4 +171,4 @@ class ClientesController extends Controller
     }
 
 }
-    
+

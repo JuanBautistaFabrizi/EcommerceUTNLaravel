@@ -1,0 +1,35 @@
+.table,td{
+    border: 1px solid black;
+}
+
+h1{
+    text-align: center;
+}
+
+.btn{
+    color: blue;
+    background-color: brown;
+}
+
+.buscador{
+    color: green;
+}
+
+.borrar{
+    color: red;
+    background-color: red;
+}
+
+input{
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.crear{
+    color:tomato;
+}
+
+.img{
+    width: 40px;
+    height: 40px;
+}

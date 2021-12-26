@@ -14,25 +14,35 @@ class ProductosController extends Controller
      */
     public function index(Request $request)
     {
-        $idproducto = $request->get('idproducto');
+        /*$idproducto = $request->get('idproducto');
         $modelo = $request->get('modelo');
         $color = $request->get('color');
         $talle = $request->get('talle');
         $precio = $request->get('precio');
-        $imagen = $request->get('imagen');
+        $imagen = $request->get('imagen'); */
 
 
-        $productos = DB::table("producto")->select("*")
-            ->where("idproducto",$idproducto)
+
+
+          /*$productos = DB::table("producto")->select('*')
+            ->where("idproducto","like","%".$idproducto."%")
             ->where("modelo","like","%".$modelo."%")
             ->where("color","like","%".$color."%")
             ->where("talle","like","%".$talle."%")
             ->where("precio","like","%".$precio."%")
-            ->where("imagen","like","%".$imagen."%")
-            ->get();
-            
+            ->where("imagen",$imagen)
+            ->get();*/
+
+          $productos = DB::table("producto")->select("*")->get();
+
+            /*$productos = DB::select("SELECT idproducto FROM producto WHERE idproducto = 2");*/
+            /* $productos = DB::table("producto")->select("*")->get(); */
+
+
+
         $parametros = [
-            "productos" => $productos
+            "productos" => $productos,
+            "titulo" => "Tabla de productos"
         ];
         return view('productos.productos',$parametros);
     }
@@ -45,7 +55,7 @@ class ProductosController extends Controller
     public function create()
     {
         $parametros = [
-            
+
             "titulo" => "Formulario para crear productos"
         ];
         return view('productos.crear-producto',$parametros);
@@ -109,7 +119,7 @@ class ProductosController extends Controller
             "talle" => 'required|max:45',
             "precio" => 'required|max:45',
             "imagen" => 'required|max:500000',
-            
+
         ]);
 
         $modelo = $request->post('modelo');
@@ -117,7 +127,7 @@ class ProductosController extends Controller
         $talle = $request->post('talle');
         $precio = $request->post('precio');
         $imagen = $request->post('imagen');
-        
+
 
          DB::update("UPDATE producto SET modelo=?,color=?,talle=?,precio=?,imagen=? WHERE idproducto=$id",[$modelo,$color,$talle,$precio,$imagen]);
 
@@ -137,3 +147,4 @@ class ProductosController extends Controller
         return redirect()->route('producto.index');
     }
 }
+
