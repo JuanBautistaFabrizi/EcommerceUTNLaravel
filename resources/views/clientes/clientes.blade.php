@@ -10,10 +10,10 @@
     <title>Document</title>
 </head>
 <body>
-<br>
-    <h2 class="buscador">Buscador de clientes</h2>
 
-<form  method="get" action="clientes">
+    <h2 class="buscador">Buscador</h2>
+
+<form class="form" method="get" action="clientes">
     <label for="idCliente">id: </label>
     <input type="text" name="idCliente"> <br>
     <label for="nombre">nombre: </label>
@@ -28,14 +28,13 @@
     <input type="text" name="email"> <br>
     <label for="edad">edad: </label>
     <input type="text" name="edad"> <br>
-    <button type="submit">Buscar</button>
+    <button class="btn" type="submit">Buscar</button>
 </form>
-<br>
-<br>
-<h1 style="color:blue">{{$titulo}}</h1>
 
-<table>
-    <thead>
+<h1 class="titulo">{{$titulo}}</h1>
+
+<table class="table">
+    <thead class="head">
         <tr>
             <th>id</th>
             <th>nombre</th>
@@ -59,7 +58,7 @@
                 <td>{{$cliente->email}}</td>
                 <td>{{$cliente->edad}}</td>
                 <td>
-                    <a href="{{ url('cliente/'.$cliente->idCliente.'/edit')}}">Editar</a>
+                    <a href="{{ url('clientes/'.$cliente->idCliente.'/edit')}}">Editar</a>
                 </td>
                 <td>
                     <form method="POST" action="clientes/{{$cliente->idCliente}}">
@@ -93,7 +92,7 @@
     <input type="text" name="email"> <br>
     <label for="edad">edad: </label>
     <input type="text" name="edad"> <br>
-    <button  type="submit">Agregar</button>
+    <button class="btn"  type="submit">Agregar</button>
 </form>
 </body>
 </html>

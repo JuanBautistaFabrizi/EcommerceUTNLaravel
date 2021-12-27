@@ -8,10 +8,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Productos</h1>
+
     <h2 class="buscador">Buscador de productos</h2>
 
-<form method="get" action="productos">
+<form class="form" method="get" action="productos">
     <label for="idproducto">id: </label>
     <input type="text" name="idproducto"><br>
     <label for="modelo">modelo: </label>
@@ -26,6 +26,8 @@
 </form>
 <br>
 <br>
+<h1 class="titulo">Productos</h1>
+
 <table class="table">
     <thead>
         <tr>
@@ -47,9 +49,9 @@
             <td>{{$producto->color}}</td>
             <td>{{$producto->talle}}</td>
             <td>{{$producto->precio}}</td>
-            <td class="img"><img src="{{ asset('img/'.$producto->imagen) }}" /></td>
+            <td ><img class="img" src="{{ asset('img/'.$producto->imagen) }}" /></td>
             <td>
-                    <a href="{{ url('producto/'.$producto->idproducto.'/edit')}}">Editar</a>
+                    <a href="{{ url('productos/'.$producto->idproducto.'/edit')}}">Editar</a>
                 </td>
                 <td>
                     <form method="POST" action="producto/{{$producto->idproducto}}">
@@ -65,7 +67,7 @@
 <br>
 <h2 class="crear">Crear producto nuevo</h2>
 
-<form method="post" action="{{ route('productos.store');}}">
+<form class="form" method="post" action="{{ route('productos.store');}}">
     @csrf
     <label for="modelo">modelo: </label>
     <input type="text" name="modelo"> <br>

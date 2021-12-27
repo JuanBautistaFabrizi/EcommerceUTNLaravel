@@ -1,5 +1,15 @@
-<h1>Editar cliente</h1>
-<form  method="post" action="clientes/edit">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{asset('css/clientes.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="crear">Editar cliente</h1>
+<form class="form" method="post" action="clientes/edit">
     @csrf
     @method('PUT')
     <label for="nombre">nombre: </label>
@@ -14,5 +24,7 @@
     <input type="text" name="email"> <br>
     <label for="edad">edad: </label>
     <input type="text" name="edad"> <br>
-    <button type="submit">Editar</button>
+    <button class="btn" type="submit">Editar</button>
 </form>
+</body>
+</html>

@@ -34,7 +34,7 @@ class ClientesController extends Controller
 
         $parametros = [
             "clientes" => $clientes,
-            "titulo" => "Tabla de clientes"
+            "titulo" => "Clientes"
         ];
         return view('clientes.clientes',$parametros);
 
