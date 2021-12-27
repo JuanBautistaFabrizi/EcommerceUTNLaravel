@@ -34,7 +34,7 @@
 <h1 class="titulo">{{$titulo}}</h1>
 
 <table class="table">
-    <thead class="head">
+    <thead>
         <tr>
             <th>id</th>
             <th>nombre</th>

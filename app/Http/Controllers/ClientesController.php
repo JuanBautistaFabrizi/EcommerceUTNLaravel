@@ -154,7 +154,7 @@ class ClientesController extends Controller
             "edad" => $edad
          ]);
 
-        return redirect()->route('cliente.show',[$id]);
+        return redirect()->route('clientes.show',[$id]);
     }
 
     /**
@@ -167,7 +167,7 @@ class ClientesController extends Controller
     {
         DB::delete('DELETE FROM cliente WHERE idCliente = ?', [$id]);
         //DB::table('cliente')->where('idCliente', $id)->delete();
-        return redirect()->route('cliente.index');
+        return redirect()->route('clientes.index');
     }
 
 }

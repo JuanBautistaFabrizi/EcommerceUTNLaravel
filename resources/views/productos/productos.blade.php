@@ -52,14 +52,14 @@
             <td ><img class="img" src="{{ asset('img/'.$producto->imagen) }}" /></td>
             <td>
                     <a href="{{ url('productos/'.$producto->idproducto.'/edit')}}">Editar</a>
-                </td>
-                <td>
+            </td>
+            <td>
                     <form method="POST" action="producto/{{$producto->idproducto}}">
                         @csrf
                         {{@method_field('DELETE')}}
                         <input type="submit" name="submit" value="Delete">
                     </form>
-                </td>
+            </td>
         </tr>
         @endforeach
     </tbody>

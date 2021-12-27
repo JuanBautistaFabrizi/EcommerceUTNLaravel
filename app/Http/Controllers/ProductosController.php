@@ -90,7 +90,8 @@ class ProductosController extends Controller
      */
     public function show($id)
     {
-        return view('producto.editar-producto',$id);
+        return view('productos.editar-producto',$id);
+
     }
 
     /**
@@ -103,7 +104,7 @@ class ProductosController extends Controller
     {
         DB::table('producto')
         ->where('idproducto',$id)->get();
-        return view('producto.editar-producto');
+        return view('productos.editar-producto');
     }
 
     /**
@@ -133,7 +134,7 @@ class ProductosController extends Controller
 
          DB::update("UPDATE producto SET modelo=?,color=?,talle=?,precio=?,imagen=? WHERE idproducto=$id",[$modelo,$color,$talle,$precio,$imagen]);
 
-         return redirect()->route('producto.show',[$id]);
+         return redirect()->route('productos.show',[$id]);
     }
 
     /**
@@ -146,7 +147,7 @@ class ProductosController extends Controller
     {
         DB::delete('DELETE FROM producto WHERE id = ?', [$id]);
         //DB::table('cliente')->where('idCliente', $id)->delete();
-        return redirect()->route('producto.index');
+        return redirect()->route('productos.index');
     }
 }
 
