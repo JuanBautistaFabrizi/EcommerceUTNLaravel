@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ClientesController;
 use App\Http\Controllers\ProductosController;
+use App\Http\Controllers\TiendaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,5 +23,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::resource('clientes',ClientesController::class);
 Route::resource('productos',ProductosController::class);
+Route::resource('tienda',TiendaController::class);
 
 

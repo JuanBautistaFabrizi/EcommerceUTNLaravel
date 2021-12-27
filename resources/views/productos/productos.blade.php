@@ -22,7 +22,7 @@
     <input type="text" name="talle"><br>
     <label for="precio">precio: </label>
     <input type="text" name="precio"><br>
-    <button type="submit">Buscar</button>
+    <button class="btn" type="submit">Buscar</button>
 </form>
 <br>
 <br>
@@ -79,7 +79,7 @@
     <input type="text" name="precio"> <br>
     <label for="imagen">imagen: </label>
     <input type="file" name="imagen"> <br>
-    <button type="submit">Agregar</button>
+    <button class="btn" type="submit">Agregar</button>
 </form>
 
 </body>
