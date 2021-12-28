@@ -102,9 +102,13 @@ class ProductosController extends Controller
      */
     public function edit($id)
     {
-        DB::table('producto')
-        ->where('idproducto',$id)->get();
-        return view('productos.editar-producto');
+        /* DB::table('producto')
+        ->where('idproducto',$id)->get(); */
+        $params = [
+            'id' => $id
+        ];
+        return view('productos.editar-producto',$params);
+
     }
 
     /**
@@ -134,7 +138,7 @@ class ProductosController extends Controller
 
          DB::update("UPDATE producto SET modelo=?,color=?,talle=?,precio=?,imagen=? WHERE idproducto=$id",[$modelo,$color,$talle,$precio,$imagen]);
 
-         return redirect()->route('productos.show',[$id]);
+         return redirect()->route('productos.index');
     }
 
     /**
@@ -145,8 +149,8 @@ class ProductosController extends Controller
      */
     public function destroy($id)
     {
-        DB::delete('DELETE FROM producto WHERE id = ?', [$id]);
-        //DB::table('cliente')->where('idCliente', $id)->delete();
+        /* DB::delete('DELETE FROM producto WHERE id = ?', [$id]); */
+        DB::table('producto')->where('idproducto', $id)->delete();
         return redirect()->route('productos.index');
     }
 }

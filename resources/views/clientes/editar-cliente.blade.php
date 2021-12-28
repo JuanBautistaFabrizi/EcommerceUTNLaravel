@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1 class="crear">Editar cliente</h1>
-<form class="form" method="post" action="clientes/edit">
+<form class="form" method="post" action="{{ route('clientes.update',$id);}}">
     @csrf
     @method('PUT')
     <label for="nombre">nombre: </label>
@@ -25,6 +25,7 @@
     <label for="edad">edad: </label>
     <input type="text" name="edad"> <br>
     <button class="btn" type="submit">Editar</button>
+    <a class="volver" href="{{ url('clientes')}}">Volver</a>
 </form>
 </body>
 </html>

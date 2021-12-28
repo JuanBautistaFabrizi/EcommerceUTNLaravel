@@ -54,11 +54,12 @@
                     <a href="{{ url('productos/'.$producto->idproducto.'/edit')}}">Editar</a>
             </td>
             <td>
-                    <form method="POST" action="producto/{{$producto->idproducto}}">
+                    <form method="POST" action="productos/{{$producto->idproducto}}">
                         @csrf
                         {{@method_field('DELETE')}}
                         <input type="submit" name="submit" value="Delete">
                     </form>
+
             </td>
         </tr>
         @endforeach

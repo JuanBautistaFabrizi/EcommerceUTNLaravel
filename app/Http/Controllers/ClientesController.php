@@ -113,9 +113,13 @@ class ClientesController extends Controller
      */
     public function edit($id)
     {
-        DB::table('cliente')
-        ->where('idCliente',$id)->get();
-        return view('clientes.editar-cliente');
+        /* DB::table('cliente')
+        ->where('idCliente',$id)->get(); */
+
+        $params = [
+            'id' => $id
+        ];
+        return view('clientes.editar-cliente',$params);
     }
 
     /**
@@ -154,7 +158,7 @@ class ClientesController extends Controller
             "edad" => $edad
          ]);
 
-        return redirect()->route('clientes.show',[$id]);
+        return redirect()->route('clientes.index');
     }
 
     /**

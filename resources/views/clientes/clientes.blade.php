@@ -57,7 +57,8 @@
                 <td>{{$cliente->email}}</td>
                 <td>{{$cliente->edad}}</td>
                 <td>
-                    <a href="{{ url('clientes/'.$cliente->idCliente.'/edit')}}">Editar</a>
+                    {{-- <a href="{{ url('clientes/'.$cliente->idCliente.'/edit')}}">Editar</a> --}}
+                    <a href="{{ route('clientes.edit',$cliente->idCliente)}}">Editar</a>
                 </td>
                 <td>
                     <form method="POST" action="clientes/{{$cliente->idCliente}}">

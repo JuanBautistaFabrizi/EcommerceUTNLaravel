@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1 class="crear">Editar producto</h1>
-<form class="form" method="post" action="productos/edit">
+<form class="form" method="post" action="{{ route('productos.update',$id);}}">
     @csrf
     @method('PUT')
     <label for="modelo">modelo: </label>
@@ -22,7 +22,8 @@
     <input type="text" name="precio"> <br>
     <label for="imagen">imagen: </label>
     <input type="file" name="imagen"> <br>
-    <button type="submit">Agregar</button>
+    <button class="btn" type="submit">Editar</button>
+    <a class="volver" href="{{ url('productos')}}">Volver</a>
 </form>
 </body>
 </html>
