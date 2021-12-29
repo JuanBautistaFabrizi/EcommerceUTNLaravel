@@ -5,28 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{asset('css/clientes.css')}}">
-    <title>Document</title>
+    <title>Tabla productos</title>
 </head>
 <body>
-
-    <h2 class="buscador">Buscador de productos</h2>
-
-<form class="form" method="get" action="productos">
-    <label for="idproducto">id: </label>
-    <input type="text" name="idproducto"><br>
-    <label for="modelo">modelo: </label>
-    <input type="text" name="modelo"><br>
-    <label for="color">color: </label>
-    <input type="text" name="color"><br>
-    <label for="talle">talle: </label>
-    <input type="text" name="talle"><br>
-    <label for="precio">precio: </label>
-    <input type="text" name="precio"><br>
-    <button class="btn" type="submit">Buscar</button>
-</form>
-<br>
-<br>
-<h1 class="titulo">Productos</h1>
+    <h1 class="titulo">Productos</h1>
 
 <table class="table">
     <thead>
@@ -65,7 +47,23 @@
         @endforeach
     </tbody>
 </table>
-<br>
+
+<h2 class="buscador">Buscador de productos</h2>
+
+<form class="form" method="get" action="productos">
+    <label for="idproducto">id: </label>
+    <input type="text" name="idproducto"><br>
+    <label for="modelo">modelo: </label>
+    <input type="text" name="modelo"><br>
+    <label for="color">color: </label>
+    <input type="text" name="color"><br>
+    <label for="talle">talle: </label>
+    <input type="text" name="talle"><br>
+    <label for="precio">precio: </label>
+    <input type="text" name="precio"><br>
+    <button class="btn" type="submit">Buscar</button>
+</form>
+
 <h2 class="crear">Crear producto nuevo</h2>
 
 <form class="form" method="post" action="{{ route('productos.store');}}">

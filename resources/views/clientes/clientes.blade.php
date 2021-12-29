@@ -6,31 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{asset('css/clientes.css')}}">
 
-    <title>Document</title>
+    <title>tabla clientes</title>
 </head>
 <body>
-
-    <h2 class="buscador">Buscador</h2>
-
-<form class="form" method="get" action="clientes">
-    <label for="idCliente">id: </label>
-    <input type="text" name="idCliente"> <br>
-    <label for="nombre">nombre: </label>
-    <input type="text" name="nombre"> <br>
-    <label for="apellido">apellido: </label>
-    <input type="text" name="apellido"> <br>
-    <label for="domicilio">domicilio: </label>
-    <input type="text" name="domicilio"> <br>
-    <label for="telefono">telefono: </label>
-    <input type="text" name="telefono"> <br>
-    <label for="email">email: </label>
-    <input type="text" name="email"> <br>
-    <label for="edad">edad: </label>
-    <input type="text" name="edad"> <br>
-    <button class="btn" type="submit">Buscar</button>
-</form>
-
-<h1 class="titulo">{{$titulo}}</h1>
+    <h1 class="titulo">{{$titulo}}</h1>
 
 <table class="table">
     <thead>
@@ -72,6 +51,25 @@
         @endforeach
     </tbody>
 </table>
+
+<h2 class="buscador">Buscador</h2>
+<form class="form" method="get" action="clientes">
+    <label for="idCliente">id: </label>
+    <input type="text" name="idCliente"> <br>
+    <label for="nombre">nombre: </label>
+    <input type="text" name="nombre"> <br>
+    <label for="apellido">apellido: </label>
+    <input type="text" name="apellido"> <br>
+    <label for="domicilio">domicilio: </label>
+    <input type="text" name="domicilio"> <br>
+    <label for="telefono">telefono: </label>
+    <input type="text" name="telefono"> <br>
+    <label for="email">email: </label>
+    <input type="text" name="email"> <br>
+    <label for="edad">edad: </label>
+    <input type="text" name="edad"> <br>
+    <button class="btn" type="submit">Buscar</button>
+</form>
 
 <h2 class="crear">Crear cliente nuevo</h2>
 

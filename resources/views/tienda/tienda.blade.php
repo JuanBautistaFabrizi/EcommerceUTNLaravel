@@ -1,137 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{asset('css/tienda.css')}}">
-    <script type="text/javascript" src="{{ asset('js/function.js')}}"></script>
-    rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    <title>Tienda</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/x-icon" href="img/company_logo.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link  rel="stylesheet" href="{{asset('css/styles.css')}}">
+    <title>Inicio</title>
 </head>
-<body id="page-top">
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm" id="mainNav">
-        <div class="container px-4">
-            <a class="navbar-brand" href="#">
-                <img src="https://getbootstrap.com/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="30"
-                    height="24" class="d-inline-block align-text-top">
-                Column Spring
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
-                    class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#solutions">Solutions</a></li>
+
+<body>
+    <!-- BARRA DE NAVEGACION-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5">
+            <img src="https://cherny.com.ar/web/image/res.company/1/logo?unique=8b1eb8b" alt="logo de la empresa" class="navbar-brand" width="60px" height="60px">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="https://localhost/TP-UTN/tiendaDeRopaUTN/public/tienda">Inicio</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="https://localhost/TP-UTN/tiendaDeRopaUTN/public/contact">Contacto</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Comprar</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="https://localhost/TP-UTN/tiendaDeRopaUTN/public/sale"><i class="bi bi-cash-coin"></i>
+                                    Ofertas</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li><a class="dropdown-item" href="https://localhost/TP-UTN/tiendaDeRopaUTN/public/catalogo"><i class="bi bi-bag"></i>
+                                    Catalogo</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Cuenta</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="https://localhost/TP-UTN/tiendaDeRopaUTN/public/login"><i class="bi bi-person-circle"></i> Iniciar
+                                    Sesion</a></li>
+                            <li><a class="dropdown-item" href="https://localhost/TP-UTN/tiendaDeRopaUTN/public/register"><i class="bi bi-person-plus-fill"></i>
+                                    Registrarse</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                        </ul>
+                    </li>
+
                 </ul>
             </div>
         </div>
     </nav>
-
-
-    <!-- Header-->
+    <!-- HEADER-->
     <header>
-        <div class="container-lg">
-            <div class="row align-items-center">
-                <div class="col-md">
-                    <h1 class="h1-header">We help tell your brand's story</h1>
-                    <h2 class="my-4">The most efficient toolset for business</h2>
-                    <a class="btn btn-primary" href="#" role="button">Discover more
-                        <i class="las la-angle-right"></i></a>
-                </div>
-                <div class="col-md">
-                    <div class="box-image d-flex justify-content-center align-items-center mt-4 mt-md-0">
-                        <img style="width: 43em"  src="https://previews.123rf.com/images/sergeypykhonin/sergeypykhonin1705/sergeypykhonin170500095/79248250-compras-banner-de-boutique-concepto-de-tienda-de-moda-ilustraci%C3%B3n-vectorial.jpg" alt="banner de la tienda" srcset="">
-
-                    </div>
-                </div>
-            </div>
-        </div>
+        <img  src="https://i.pinimg.com/564x/a6/b7/2e/a6b72ea7df98cd1105ae34821918b4fb.jpg" alt="" width="100%" height="500px">
     </header>
-    <section id="solutions" class="bg-color2">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h2>Custom solutions</h2>
-                </div>
-                <div class="row g-4 mt-3 justify-content-center">
-                    <div class="col-sm-6 col-md">
-                        <div class="box-image d-flex justify-content-center align-items-center mt-4 mt-md-0">
-                            <i class="las la-image"></i>
-                        </div>
-                        <div class="bg-white text-center px-2 py-4">
-                            <h3>Reactive tools</h3>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md">
-                        <div class="box-image d-flex justify-content-center align-items-center mt-4 mt-md-0">
-                            <i class="las la-image"></i>
-                        </div>
-                        <div class="bg-white text-center px-2 py-4">
-                            <h3>Reactive tools</h3>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md">
-                        <div class="box-image d-flex justify-content-center align-items-center mt-4 mt-md-0">
-                            <i class="las la-image"></i>
-                        </div>
-                        <div class="bg-white text-center px-2 py-4">
-                            <h3>Reactive tools</h3>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                </div>
+    <!-- SECTION-->
+    <section class="py-5">
+        <div class="container px-4 px-lg-5 mt-5">
+            <div class="container mb-5">
+                <h1 class="display-4 fw-bolder text-dark justify-content-center">Productos Destacados</h1>
+                <p class="lead fw-normal text-dark-50 mb-0">Recomendados por nuestros clientes</p>
             </div>
-        </div>
-    </section>
-    <section id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h2>Our philosophy</h2>
-                </div>
-            </div>
-            <div class="row mt-3 align-items-center">
-                <div class="col-md col-xl-4">
-                    <div class="box-image d-flex justify-content-center align-items-center mt-4 mt-md-0">
-                        <i class="las la-image"></i>
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="https://essential.vteximg.com.br/arquivos/ids/353392-1000-1000/302-0017_1.jpg?v=637363853153300000" alt="campera nike" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Campera Nike</h5>
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                $20.000
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="./bikes.html">Ver Producto</a></div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md col-xl-8">
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima, dolor maiores. Harum, ratione
-                        commodi. Natus, error fugiat alias quam repellendus possimus molestiae sit voluptatem. Deserunt
-                        commodi minima eos adipisci esse?
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, consectetur sequi,
-                        maiores vel laudantium fugit explicabo omnis facilis quisquam excepturi ipsum voluptas
-                        perspiciatis fugiat soluta velit suscipit, aspernatur tenetur natus!
-                    </p>
-                    <a class="btn btn-primary" href="#" role="button">Read more
-                        <i class="las la-angle-right"></i></a>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="https://www.opensports.com.ar/media/catalog/product/cache/4769e4d9f3516e60f2b4303f8e5014a8/G/N/GN4269_0.jpg" alt="campera adidas" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Campera Maraton Adidas</h5>
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                $25.000
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="./bikes.html">Ver Producto</a></div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        </div>
-    </section>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="https://pbs.twimg.com/media/DRcKkk5W0AIoSDl.jpg" alt="remera gucci" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Remera Gucci</h5>
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                $12.000
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="./bikes.html">Ver Producto</a></div>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- Bootstrap core JS-->
+
+    </section>
+    <!-- FOOTER-->
+    <footer class="text-center text-white bg-dark">
+        <div class="text-center p-3 bg-dark">
+            <div class="text-center p-3 bg-dark">
+            </div>
+
+            <section class="text-center mb-5">
+                <a href="" class="btn btn-outline-dark text-white me-4"><i class="bi bi-instagram"></i> Instagram</a>
+
+                <a href="" class="btn btn-outline-dark text-white me-4"><i class="bi bi-facebook"></i> Facebook</a>
+
+                <a href="" class="btn btn-outline-dark text-white me-4"><i class="bi bi-envelope-fill"></i> Email</a>
+
+                <a href="" class="btn btn-outline-dark text-white me-4"><i class="bi bi-whatsapp"></i> Whatsapp</a>
+            </section>
+        </div>
+    </footer>
+    <!-- SCRIPTS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
+    <script src="js/Bikes.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/buy.js"></script>
 </body>
+
 </html>

@@ -28,6 +28,7 @@ a:link, a:visited, a:active {
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: rgb(7, 53, 71);
+    margin-bottom: 40px;
 }
 
 .btn{
