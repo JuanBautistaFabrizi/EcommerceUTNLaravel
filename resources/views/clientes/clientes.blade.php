@@ -55,19 +55,19 @@
 <h2 class="buscador">Buscador</h2>
 <form class="form" method="get" action="clientes">
     <label for="idCliente">id: </label>
-    <input type="text" name="idCliente"> <br>
+    <input type="text" name="idCliente" autocomplete="off"> <br>
     <label for="nombre">nombre: </label>
-    <input type="text" name="nombre"> <br>
+    <input type="text" name="nombre" autocomplete="off"> <br>
     <label for="apellido">apellido: </label>
-    <input type="text" name="apellido"> <br>
+    <input type="text" name="apellido" autocomplete="off"> <br>
     <label for="domicilio">domicilio: </label>
-    <input type="text" name="domicilio"> <br>
+    <input type="text" name="domicilio" autocomplete="off"> <br>
     <label for="telefono">telefono: </label>
-    <input type="text" name="telefono"> <br>
+    <input type="text" name="telefono" autocomplete="off"> <br>
     <label for="email">email: </label>
-    <input type="text" name="email"> <br>
+    <input type="text" name="email" autocomplete="off"> <br>
     <label for="edad">edad: </label>
-    <input type="text" name="edad"> <br>
+    <input type="text" name="edad" autocomplete="off"> <br>
     <button class="btn" type="submit">Buscar</button>
 </form>
 
@@ -79,19 +79,26 @@
 <form class="form" method="post" action={{ route('clientes.store');}}>
     @csrf
     <label for="nombre">nombre: </label>
-    <input type="text" name="nombre"> <br>
+    <input type="text" name="nombre" autocomplete="off"> <br>
     <label for="apellido">apellido: </label>
-    <input type="text" name="apellido"> <br>
+    <input type="text" name="apellido" autocomplete="off"> <br>
     <label for="domicilio">domicilio: </label>
-    <input type="text" name="domicilio"> <br>
+    <input type="text" name="domicilio" autocomplete="off"> <br>
     <label for="telefono">telefono: </label>
-    <input type="text" name="telefono"> <br>
+    <input type="text" name="telefono" autocomplete="off"> <br>
     <label for="email">mail: </label>
-    <input type="text" name="email"> <br>
+    <input type="text" name="email" autocomplete="off"> <br>
     <label for="edad">edad: </label>
-    <input type="text" name="edad"> <br>
+    <input type="text" name="edad" autocomplete="off"> <br>
     <button class="btn"  type="submit">Agregar</button>
 </form>
+<div>
+    <a style="margin-bottom: 30px;font-size: 1.5rem" href="https://localhost/TP-UTN/tiendaDeRopaUTN/public/productos">Productos</a>
+</div>
+<div>
+    <a style="margin-bottom: 30px;font-size: 1.5rem" href="https://localhost/TP-UTN/tiendaDeRopaUTN/public/login">Salir</a>
+</div>
+
 </body>
 </html>
 

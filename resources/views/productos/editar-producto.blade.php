@@ -13,15 +13,15 @@
     @csrf
     @method('PUT')
     <label for="modelo">modelo: </label>
-    <input type="text" name="modelo"> <br>
+    <input type="text" name="modelo" autocomplete="off"> <br>
     <label for="color">color: </label>
-    <input type="text" name="color"> <br>
+    <input type="text" name="color" autocomplete="off"> <br>
     <label for="talle">talle: </label>
-    <input type="text" name="talle"> <br>
+    <input type="text" name="talle" autocomplete="off"> <br>
     <label for="precio">precio: </label>
-    <input type="text" name="precio"> <br>
+    <input type="text" name="precio" autocomplete="off"> <br>
     <label for="imagen">imagen: </label>
-    <input type="file" name="imagen"> <br>
+    <input type="file" name="imagen" autocomplete="off"> <br>
     <button class="btn" type="submit">Editar</button>
     <a class="volver" href="{{ url('productos')}}">Volver</a>
 </form>

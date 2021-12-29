@@ -78,7 +78,7 @@
                             </div>
                         </div>
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-dark mt-auto" id="1"><i
+                            <div class="text-center"><a class="btn btn-primary mt-auto" id="1"><i
                                         class="bi bi-cart-plus-fill"></i>
                                 </a>
                                 <a class="btn btn-danger mt-auto" id="deleteButton1"><i
@@ -97,7 +97,7 @@
                             </div>
                         </div>
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-dark mt-auto" id="2"><i
+                            <div class="text-center"><a class="btn btn-primary mt-auto" id="2"><i
                                         class="bi bi-cart-plus-fill"></i> </a>
                                 <a class="btn btn-danger mt-auto" id="deleteButton2"><i
                                         class="bi bi-trash"></i></a>
@@ -116,7 +116,7 @@
                             </div>
                         </div>
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-dark mt-auto" id="3"><i class="bi bi-cart-plus-fill"></i></a>
+                            <div class="text-center"><a class="btn btn-primary mt-auto" id="3"><i class="bi bi-cart-plus-fill"></i></a>
                                 <a class="btn btn-danger mt-auto" id="deleteButton3"><i class="bi bi-trash"></i></a>
                             </div>
                         </div>
@@ -133,7 +133,7 @@
                             </div>
                         </div>
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-dark mt-auto" id="4"><i
+                            <div class="text-center"><a class="btn btn-primary mt-auto" id="4"><i
                                         class="bi bi-cart-plus-fill"></i>
                                 </a>
                                 <a class="btn btn-danger mt-auto" id="deleteButton4"><i
@@ -152,7 +152,7 @@
                             </div>
                         </div>
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-dark mt-auto" id="5"><i
+                            <div class="text-center"><a class="btn btn-primary mt-auto" id="5"><i
                                         class="bi bi-cart-plus-fill"></i>
                                 </a>
                                 <a class="btn btn-danger mt-auto" id="deleteButton5"><i
@@ -173,7 +173,7 @@
                             </div>
                         </div>
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-dark mt-auto" id="6"><i
+                            <div class="text-center"><a class="btn btn-primary mt-auto" id="6"><i
                                         class="bi bi-cart-plus-fill"></i></a>
                                 <a class="btn btn-danger mt-auto" id="deleteButton6"><i
                                         class="bi bi-trash"></i></a>
@@ -191,7 +191,7 @@
                             </div>
                         </div>
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-dark mt-auto" id="7"><i
+                            <div class="text-center"><a class="btn btn-primary mt-auto" id="7"><i
                                         class="bi bi-cart-plus-fill"></i></a>
                                 <a class="btn btn-danger mt-auto" id="deleteButton7"><i
                                         class="bi bi-trash"></i></a>
@@ -210,7 +210,7 @@
                             </div>
                         </div>
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-dark mt-auto" id="8"><i
+                            <div class="text-center"><a class="btn btn-primary mt-auto" id="8"><i
                                         class="bi bi-cart-plus-fill"></i></a>
                                 <a class="btn btn-danger mt-auto" id="deleteButton8"><i
                                         class="bi bi-trash"></i></a>

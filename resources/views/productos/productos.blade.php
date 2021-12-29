@@ -52,15 +52,15 @@
 
 <form class="form" method="get" action="productos">
     <label for="idproducto">id: </label>
-    <input type="text" name="idproducto"><br>
+    <input type="text" name="idproducto" autocomplete="off"><br>
     <label for="modelo">modelo: </label>
-    <input type="text" name="modelo"><br>
+    <input type="text" name="modelo" autocomplete="off"><br>
     <label for="color">color: </label>
-    <input type="text" name="color"><br>
+    <input type="text" name="color" autocomplete="off"><br>
     <label for="talle">talle: </label>
-    <input type="text" name="talle"><br>
+    <input type="text" name="talle" autocomplete="off"><br>
     <label for="precio">precio: </label>
-    <input type="text" name="precio"><br>
+    <input type="text" name="precio" autocomplete="off"><br>
     <button class="btn" type="submit">Buscar</button>
 </form>
 
@@ -69,17 +69,22 @@
 <form class="form" method="post" action="{{ route('productos.store');}}">
     @csrf
     <label for="modelo">modelo: </label>
-    <input type="text" name="modelo"> <br>
+    <input type="text" name="modelo" autocomplete="off"> <br>
     <label for="color">color: </label>
-    <input type="text" name="color"> <br>
+    <input type="text" name="color" autocomplete="off"> <br>
     <label for="talle">talle: </label>
-    <input type="text" name="talle"> <br>
+    <input type="text" name="talle" autocomplete="off"> <br>
     <label for="precio">precio: </label>
-    <input type="text" name="precio"> <br>
+    <input type="text" name="precio" autocomplete="off"> <br>
     <label for="imagen">imagen: </label>
     <input type="file" name="imagen"> <br>
     <button class="btn" type="submit">Agregar</button>
 </form>
-
+<div>
+    <a style="margin-bottom: 30px;font-size: 1.5rem" href="https://localhost/TP-UTN/tiendaDeRopaUTN/public/clientes">Clientes</a>
+</div>
+<div>
+    <a style="margin-bottom: 30px;font-size: 1.5rem" href="https://localhost/TP-UTN/tiendaDeRopaUTN/public/login">Salir</a>
+</div>
 </body>
 </html>

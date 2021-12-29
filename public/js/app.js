@@ -113,7 +113,7 @@ function validateContactForm() {
 
 // Validando el Form de compra
 document.getElementById("viewTotal").addEventListener('click', () => replaceForm());
-// document.getElementById("pay").addEventListener('click', () => validateFormPay());
+document.getElementById("pay").addEventListener('click', () => validateFormPay());
 document.getElementById("cancel").addEventListener('click', () => returnBikes());
 
 function replaceForm() {

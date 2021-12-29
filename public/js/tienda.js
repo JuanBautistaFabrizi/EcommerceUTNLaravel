@@ -116,7 +116,11 @@ function removeAll() {
     priceContainer.innerText = ""
     quantityContainer.innerText = ""
     document.getElementById("total").innerText = "";
-    cart = [];
     const numero = document.getElementById("numberCart");
     numero.innerText = 0;
+}
+
+
+function backBotton() {
+    window.location.replace("https://localhost/TP-UTN/tiendaDeRopaUTN/public/tienda");
 }
