@@ -151,5 +151,7 @@ function cancel() {
     const buttonCancel = document.getElementById("cancel");
     buttonCancel.textContent = "Operacion cancelada";
     buttonCancel.style.color = "red";
-    setTimeout(() => buttonCancel.textContent = "", 2500);
+    setTimeout(() => buttonCancel.textContent = "", 1500);
+    setTimeout(() => window.location.replace("https://localhost/TP-UTN/tiendaDeRopaUTN/public/catalogo"),3000)
+
 }

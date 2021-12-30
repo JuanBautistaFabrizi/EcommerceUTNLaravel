@@ -10,7 +10,7 @@
 </head>
 <body >
 
-    <button type="button" style="margin-left: 10%;margin-top: 1%;color: blue" class="btn btn-success btn-block" id="back" onclick="backBotton();">Volver</button>
+    <button type="button" style="margin-left: 5%;margin-top: 1%;color: blue" class="btn btn-success btn-block" id="back" onclick="backBotton();">Volver</button>
 
     <!-- SCRIPTS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

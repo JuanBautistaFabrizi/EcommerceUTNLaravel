@@ -43,7 +43,7 @@ const buttonRemove8 = document.getElementById("deleteButton8").addEventListener(
 // document.getElementById("viewTotal").addEventListener('click', () => cartPrice());
 document.getElementById("deleteAll").addEventListener('click', () => removeAll());
 
-const cart = [];
+var cart = [];
 const nameContainer = document.getElementById("nameProduct");
 const quantityContainer = document.getElementById("quantityProduct");
 const priceContainer = document.getElementById("priceProduct");
@@ -118,6 +118,7 @@ function removeAll() {
     document.getElementById("total").innerText = "";
     const numero = document.getElementById("numberCart");
     numero.innerText = 0;
+    cart = [];
 }
 
 
