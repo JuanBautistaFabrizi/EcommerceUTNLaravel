@@ -84,10 +84,6 @@ function validateForm() {
     }
 }
 
-// const close = document.getElementById("close").addEventListener('click', () => {
-//     nameUser = "";
-//     pa
-// });
 
 
 // Formulario de Contacto

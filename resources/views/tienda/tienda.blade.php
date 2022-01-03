@@ -139,9 +139,9 @@
             </div>
 
             <section class="text-center mb-5">
-                <a href="" class="btn btn-outline-dark text-white me-4"><i class="bi bi-instagram"></i> Instagram</a>
+                <a href="https://www.instagram.com/chernygroup/" target="_blank" class="btn btn-outline-dark text-white me-4"><i class="bi bi-instagram"></i> Instagram</a>
 
-                <a href="" class="btn btn-outline-dark text-white me-4"><i class="bi bi-facebook"></i> Facebook</a>
+                <a href="https://www.facebook.com/chernygroup" target="_blank" class="btn btn-outline-dark text-white me-4"><i class="bi bi-facebook"></i> Facebook</a>
 
                 <a href="" class="btn btn-outline-dark text-white me-4"><i class="bi bi-envelope-fill"></i> Email</a>
 
